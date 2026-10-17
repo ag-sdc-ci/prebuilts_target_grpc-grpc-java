@@ -1,0 +1,299 @@
+// Auto-generated prebuilt Blueprint for external/grpc-grpc-java
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.grpc-grpc-java
+
+package {
+    default_visibility: ["//visibility:public"],
+    default_applicable_licenses: ["external_grpc-grpc-java_license"],
+}
+
+license {
+    name: "external_grpc-grpc-java_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    license_text: [
+        "LICENSE",
+        "NOTICE.txt",
+    ],
+}
+
+cc_binary_host {
+    name: "protoc-gen-grpc-java-plugin",
+    srcs: [
+        "compiler/src/java_plugin/cpp/java_generator.cpp",
+        "compiler/src/java_plugin/cpp/java_plugin.cpp",
+    ],
+    static_libs: [
+        "libprotoc",
+    ],
+    cflags: [
+        "-Wno-unused-parameter",
+        "-DFALLTHROUGH_INTENDED=[[fallthrough]]",
+    ],
+}
+
+java_import {
+    name: "grpc-java-api",
+    jars: ["share/grpc-grpc-java/grpc-api-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-context",
+    jars: ["share/grpc-grpc-java/grpc-context-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-core",
+    jars: ["share/grpc-grpc-java/grpc-core-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-core-inprocess",
+    jars: ["share/grpc-grpc-java/grpc-core-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+}
+
+java_import {
+    name: "grpc-java-core-internal",
+    jars: ["share/grpc-grpc-java/grpc-core-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-core-util",
+    jars: ["share/grpc-grpc-java/grpc-core-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-stub",
+    jars: ["share/grpc-grpc-java/grpc-stub-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import_host {
+    name: "grpc-java-protobuf",
+    jars: ["share/grpc-grpc-java/grpc-protobuf-1.56.1.jar"],
+    prefer: true,
+}
+
+java_import {
+    name: "grpc-java-protobuf-lite",
+    jars: ["share/grpc-grpc-java/grpc-protobuf-lite-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-okhttp",
+    jars: ["share/grpc-grpc-java/grpc-okhttp-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-testing",
+    jars: ["share/grpc-grpc-java/grpc-testing-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+}
+
+java_import_host {
+    name: "grpc-java-auth",
+    jars: ["share/grpc-grpc-java/grpc-auth-1.56.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "grpc-java-reflection",
+    jars: ["share/grpc-grpc-java/grpc-services-1.56.1.jar"],
+    prefer: true,
+}
+
+java_import {
+    name: "grpc-java-core-android",
+    jars: ["share/grpc-grpc-java/grpc-android-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_import {
+    name: "grpc-java-binder",
+    jars: ["share/grpc-grpc-java/grpc-binder-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+}
+
+java_import {
+    name: "grpc-java-annotation-stubs",
+    jars: ["share/grpc-grpc-java/grpc-stub-1.56.1.jar"],
+    host_supported: true,
+    prefer: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_library {
+    name: "grpc-java-lite",
+    static_libs: [
+        "grpc-java-api",
+        "grpc-java-context",
+        "grpc-java-core",
+        "grpc-java-protobuf-lite",
+        "grpc-java-stub",
+    ],
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_library {
+    name: "grpc-java-okhttp-client-lite",
+    host_supported: true,
+    static_libs: [
+        "grpc-java-stub",
+        "grpc-java-context",
+        "grpc-java-core",
+        "grpc-java-protobuf-lite",
+        "grpc-java-okhttp",
+    ],
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+    ],
+}
+
+java_library_host {
+    name: "grpc-java",
+    static_libs: [
+        "grpc-java-auth",
+        "grpc-java-context",
+        "grpc-java-core",
+        "grpc-java-protobuf",
+        "grpc-java-protobuf-lite",
+        "grpc-java-reflection",
+        "grpc-java-stub",
+    ],
+}
+
+java_library_host {
+    name: "grpc-java-netty-shaded",
+    static_libs: [
+        "error_prone_annotations",
+        "grpc-netty-shaded-1.56.0-jar",
+        "guava",
+        "perfmark-api-lib",
+    ],
+}
+
+java_library {
+    name: "grpc-java-netty-shaded-test",
+    static_libs: [
+        "error_prone_annotations",
+        "grpc-netty-shaded-1.56.0-jar",
+        "guava",
+        "perfmark-api-lib",
+    ],
+    visibility: ["//packages/modules/Bluetooth/android/pandora/server"],
+}

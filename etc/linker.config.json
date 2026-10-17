@@ -1,0 +1,11 @@
+{
+	"provideLibs": [	
+		    "libdummy_ext_grpc_grpc_java-x86_64-v2.so",
+		    "libdummy_ext_grpc_grpc_java.so",
+		    "libdummy_shared_grpc-grpc-java-x86_64-v2.so",
+		    "libdummy_shared_grpc-grpc-java.so",
+		    "libdummy_shared_grpc_grpc_java-x86_64-v2.so",
+		    "libdummy_shared_grpc_grpc_java.so"
+	],
+	"visible": true
+}
